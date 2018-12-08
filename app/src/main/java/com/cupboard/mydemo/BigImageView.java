@@ -9,7 +9,6 @@ import android.graphics.Matrix;
 import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -34,7 +33,6 @@ public class BigImageView extends View {
 
     {
         sOptions.inPreferredConfig = Bitmap.Config.RGB_565;
-        sOptions.inScaled = true;
     }
 
     public BigImageView(Context context) {
@@ -75,7 +73,7 @@ public class BigImageView extends View {
             mRegionDecoder = BitmapRegionDecoder.newInstance(inputStream, false);
             mImageHeight = mRegionDecoder.getHeight();
             mImageWidth = mRegionDecoder.getWidth();
-            float scaleWidth =ViewUtils.getScreenWidth(getContext())/(float)(mImageWidth);
+            float scaleWidth = ViewUtils.getScreenWidth(getContext()) / (float) (mImageWidth);
             mMatrix.postScale(scaleWidth, scaleWidth);
         } catch (IOException e) {
             e.printStackTrace();
@@ -101,7 +99,6 @@ public class BigImageView extends View {
 
                 onMove(moveX, moveY);
 
-                Log.d(TAG, " moveX = " + moveX + " curX = " + curX + " downX = " + downX);
                 downX = curX;
                 downY = curY;
                 break;
@@ -168,7 +165,7 @@ public class BigImageView extends View {
         super.onDraw(canvas);
         if (mRegionDecoder != null) {
             Bitmap bitmap = mRegionDecoder.decodeRegion(mRect, sOptions);
-            canvas.drawBitmap(bitmap, 0, 0, null);
+            canvas.drawBitmap(bitmap, mMatrix, null);
         }
     }
 }
