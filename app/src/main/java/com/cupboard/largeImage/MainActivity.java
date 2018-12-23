@@ -1,4 +1,4 @@
-package com.cupboard.mydemo;
+package com.cupboard.largeImage;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -37,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 //        mDivideBigImageView = findViewById(R.id.divideimage);
-//        mDivideBigImageView.setBitmap("/sdcard/123.jpg");
+//        mDivideBigImageView.setBitmap("/sdcard/qingming.jpg");
         bigImageView = findViewById(R.id.bigimg);
-        bigImageView.setBitmap("/sdcard/123.jpg");
+        bigImageView.setBitmap("/sdcard/qingming.jpg");
     }
 
     @Override

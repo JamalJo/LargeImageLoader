@@ -1,4 +1,4 @@
-package com.cupboard.mydemo;
+package com.cupboard.largeImage;
 
 import android.content.Context;
 import android.view.WindowManager;

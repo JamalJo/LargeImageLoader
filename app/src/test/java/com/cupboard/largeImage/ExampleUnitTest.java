@@ -1,4 +1,4 @@
-package com.cupboard.mydemo;
+package com.cupboard.largeImage;
 
 import org.junit.Test;
 

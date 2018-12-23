@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cupboard.mydemo.MainActivity">
+    tools:context="com.cupboard.largeImage.MainActivity">
 
     <Button
         android:id="@+id/btn_add"
@@ -20,7 +20,7 @@
         android:layout_below="@+id/btn_add"
         android:text=" - " />
 
-    <com.cupboard.mydemo.BigImageView
+    <com.cupboard.largeImage.BigImageView
         android:id="@+id/bigimg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
         android:layout_height="match_parent"
         android:visibility="gone">
 
-        <com.cupboard.mydemo.DivideBigImageView
+        <com.cupboard.largeImage.DivideBigImageView
             android:id="@+id/divideimage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

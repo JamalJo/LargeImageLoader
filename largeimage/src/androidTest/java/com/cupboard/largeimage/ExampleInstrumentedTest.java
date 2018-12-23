@@ -1,4 +1,4 @@
-package com.cupboard.mydemo;
+package com.cupboard.largeimage;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.cupboard.mydemo", appContext.getPackageName());
+        assertEquals("com.cupboard.largeimage.test", appContext.getPackageName());
     }
 }
